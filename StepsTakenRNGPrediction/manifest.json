@@ -1,10 +1,13 @@
 {
-  "Name": "StepsTakenRNGPredictionOnScreen",
-  "Author": "BlaDe",
-  "Version": "4.0.0",
-  "Description": "Show Steps Taken, and RNG predictions for the next day on screen",
+  "Name": "Daily Luck and Dish Predictions - 1.6 Fix",
+  "Author": "Igor Henrique (1.6 compatibility and configuration menu); BlaDe (original mod); Versy024 (visibility toggle)",
+  "Version": "4.2.0-unofficial.20260928",
+  "Description": "Predict tomorrow's raw luck, dish and step targets. Unofficial 1.6.15 fix with overnight validation and Generic Mod Config Menu support.",
   "UniqueID": "BlaDe.StepsTakenOnScreen",
   "EntryDll": "StepsTakenOnScreen.dll",
-  "MinimumApiVersion": "2.10.0",
-  "UpdateKeys": [ "Nexus:6783" ]
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    { "UniqueID": "spacechase0.GenericModConfigMenu", "IsRequired": false }
+  ]
 }

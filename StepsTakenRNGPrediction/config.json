@@ -1,14 +1,16 @@
 {
   "DisplaySteps": true,
   "DisplayLuck": true,
-  "DisplayGift": true,
+  "DisplayGift": false,
   "DisplayDish": true,
-  "HorizontalOffset": 0,
-  "VerticalOffset": 0,
-  "TargetLuck": -1.0,
+  "HorizontalOffset": 16,
+  "VerticalOffset": 160,
+  "WindowWidth": 580,
+  "WindowScale": 1.0,
+  "TargetLuck": 0.1,
   "TargetGifter": "",
-  "TargetDish": "Pepper Poppers",
-  "TargetDishAmount": 0,
+  "TargetDish": "",
+  "TargetDishAmount": 1,
   "TargetStepsLimit": 1000,
-  "ToggleKey": "NumPad3"
+  "ToggleKey": "F8"
 }

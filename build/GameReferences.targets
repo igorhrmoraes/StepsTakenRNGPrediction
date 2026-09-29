@@ -1,0 +1,37 @@
+<Project>
+  <PropertyGroup>
+    <CopyLocalGameAssemblies Condition="'$(CopyLocalGameAssemblies)' == ''">false</CopyLocalGameAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(GamePath)/MonoGame.Framework.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>$(GamePath)/StardewModdingAPI.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>$(GamePath)/smapi-internal/SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>$(GamePath)/Stardew Valley.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>$(GamePath)/StardewValley.GameData.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+    <Reference Include="xTile">
+      <HintPath>$(GamePath)/xTile.dll</HintPath>
+      <Private>$(CopyLocalGameAssemblies)</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckGamePath" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(GamePath)/Stardew Valley.dll')"
+           Text="Set GamePath to your Stardew Valley installation (the directory containing Stardew Valley.dll)." />
+    <Error Condition="!Exists('$(GamePath)/StardewModdingAPI.dll')"
+           Text="Install SMAPI in GamePath before building this mod." />
+  </Target>
+</Project>
